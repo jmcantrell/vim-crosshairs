@@ -1,0 +1,25 @@
+*crosshairs.txt*  Locate the cursor
+
+Author:   Jeremy Cantrell <jmcantrell@gmail.com>  *crosshairs-author*
+License:  Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                      *crosshairs* *crosshairs.vim*
+
+This plugin temporarily enables |'cursorline'| and |'cursorcolumn'| to help
+the user locate the cursor.
+
+CONFIGURATION                                     *crosshairs-configuration*
+
+g:crosshairs_loaded                               *g:crosshairs_loaded*
+    If set in your |vimrc|, crosshairs.vim is not loaded.
+
+g:crosshairs_duration                             *g:crosshairs_duration*
+    Display the cursor line and column for this long (default: '300m').
+    Takes the same arguments as |:sleep|.
+
+COMMANDS                                          *crosshairs-commands*
+
+:Crosshairs                                       *:Crosshairs*
+    Activate the crosshairs.
+
+vim:tw=78:et:ft=help:norl:
