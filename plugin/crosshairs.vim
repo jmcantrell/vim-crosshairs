@@ -11,6 +11,12 @@ if !exists('g:crosshairs_duration')
 endif
 
 function! s:crosshairs() abort
+    if exists('b:crosshairs_active')
+        return
+    endif
+
+    let b:crosshairs_active = 1
+
     let l:had_cursorline = &cursorline
     let l:had_cursorcolumn = &cursorcolumn
 
@@ -25,6 +31,8 @@ function! s:crosshairs() abort
     if ! l:had_cursorcolumn
         set nocursorcolumn
     endif
+
+    unlet b:crosshairs_active
 endfunction
 
 command! -bar Crosshairs call s:crosshairs()
