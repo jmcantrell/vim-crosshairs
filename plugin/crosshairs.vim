@@ -35,6 +35,6 @@ function! s:crosshairs() abort
     unlet b:crosshairs_active
 endfunction
 
-command! -bar Crosshairs call s:crosshairs()
+command! -bar Crosshairs call <sid>crosshairs()
 
 let &cpoptions = s:cpoptions_save
